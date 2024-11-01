@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => 'polopag/wc-polo-payments',
+        'pretty_version' => '1.0.0',
+        'version' => '1.0.0.0',
+        'reference' => NULL,
+        'type' => 'wordpress-plugin',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        'php-stubs/woocommerce-stubs' => array(
+            'pretty_version' => 'v8.3.1',
+            'version' => '8.3.1.0',
+            'reference' => 'bf594026d5d6ec043c42956a6cf465ec616cbba2',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../php-stubs/woocommerce-stubs',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
+        'php-stubs/wordpress-stubs' => array(
+            'pretty_version' => 'v6.4.1',
+            'version' => '6.4.1.0',
+            'reference' => '6d6063cf9464a306ca2a0529705d41312b08500b',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../php-stubs/wordpress-stubs',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
+        'polopag/wc-polo-payments' => array(
+            'pretty_version' => '1.0.0',
+            'version' => '1.0.0.0',
+            'reference' => NULL,
+            'type' => 'wordpress-plugin',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

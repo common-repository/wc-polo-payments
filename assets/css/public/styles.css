@@ -1,0 +1,241 @@
+.wc-polopag-qrcode-copyed {
+  box-shadow: 2px 2px 3px #e1e1e1;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 320px;
+  border: 1px solid #dadada;
+  margin: 0 auto;
+  display: none;
+}
+
+.wc-polopag-qrcode-copyed p {
+  padding: 10px;
+}
+
+.wc-polopag-qrcode-input {
+  max-width: 500px;
+  margin: 15px auto;
+  outline: 0;
+}
+
+.wc-polopag-paybox {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-bottom: 30px;
+  padding: 45px;
+}
+
+.wc-polopag-paybox.text-center {
+  text-align: center;
+}
+
+.wc-polopag-pix-message {
+  background-color: #fff;
+  padding: 40px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.wc-polopag-pix-message p {
+  text-align: center;
+}
+
+.wc-polopag-pix-message img {
+  width: 100%;
+  height: auto !important;
+  max-width: 200px;
+  max-height: none !important;
+}
+
+.polopag-instructions {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.polopag-instruction-item {
+  flex: 1;
+  background-color: #f1f1f1;
+  padding: 0.5rem;
+  text-align: left;
+  border-radius: 4px;
+  display: flex;
+  gap: 1rem;
+}
+
+.polopag-instruction-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.polopag-instruction-text {
+  flex: 1;
+  line-height: 1.5;
+}
+
+@-webkit-keyframes scaleAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes drawCircle {
+  0% {
+    stroke-dashoffset: 151px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawCircle {
+  0% {
+    stroke-dashoffset: 151px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes drawCheck {
+  0% {
+    stroke-dashoffset: 36px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawCheck {
+  0% {
+    stroke-dashoffset: 36px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#successAnimationCircle {
+  stroke-dasharray: 151px 151px;
+  stroke: #007bff;
+}
+
+#successAnimationCheck {
+  stroke-dasharray: 36px 36px;
+  stroke: #007bff;
+}
+
+#successAnimationResult {
+  fill: #007bff;
+  opacity: 0;
+}
+
+#successAnimation.animated {
+  -webkit-animation: 1s ease-out 0s 1 both scaleAnimation;
+  animation: 1s ease-out 0s 1 both scaleAnimation;
+}
+
+#successAnimation.animated #successAnimationCircle {
+  -webkit-animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle,
+    0.3s linear 0.9s 1 both fadeOut;
+  animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle,
+    0.3s linear 0.9s 1 both fadeOut;
+}
+
+#successAnimation.animated #successAnimationCheck {
+  -webkit-animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck,
+    0.3s linear 0.9s 1 both fadeOut;
+  animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck,
+    0.3s linear 0.9s 1 both fadeOut;
+}
+
+#successAnimation.animated #successAnimationResult {
+  -webkit-animation: 0.3s linear 0.9s both fadeIn;
+  animation: 0.3s linear 0.9s both fadeIn;
+}
+
+@media (max-width: 768px) {
+  .polopag-instructions {
+    flex-direction: column;
+  }
+  .wc-polopag-paybox {
+    padding: 1rem;
+  }
+}
